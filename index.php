@@ -51,6 +51,19 @@ $hotels = [
     <title>Document</title>
 </head>
 <body>
+    <ul>
+        <?php foreach ($hotels as $hotel) {?>
+            <li>
+                <?php 
+                    echo "<h2>{$hotel['name']}</h2>";
+                    echo "<h4>{$hotel['description']}</h4>";
+                    echo "<p>Voto: {$hotel['vote']}</p>";
+                    echo "<p>Distanza dal centro:{$hotel['distance_to_center']}</p>";
+                    echo "<hr>"; 
+                ?>
+            </li>
+        <?php } ?>
+    </ul>
     
 </body>
 </html>
